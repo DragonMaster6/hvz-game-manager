@@ -1,0 +1,14 @@
+uuid: f1fec96a-9244-4359-8790-6d2fa41bba14
+name: 'Humans vs Zombies Game Manager'
+mail: bjdmatson@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /user/login
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
