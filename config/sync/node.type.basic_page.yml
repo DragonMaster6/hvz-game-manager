@@ -1,0 +1,11 @@
+uuid: 4d826657-8635-4d97-b92e-8fd6405c3adb
+langcode: en
+status: true
+dependencies: {  }
+name: 'Basic Page'
+type: basic_page
+description: 'A simple content type to display a Title and Paragraph.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false
