@@ -1,25 +1,10 @@
-/* app css stylesheet */
-
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
-}
-
-.menu:before {
-  content: "[";
-}
-
-.menu:after {
-  content: "]";
-}
-
-.menu > li {
-  display: inline;
-}
-
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
-}
+#login-container {
+  width: 60%;
+  margin: 10px auto;
+  border: solid 1px black;
+  box-shadow: 0 6px 10px #999; }
+  #login-container .login-form {
+    padding: 10px; }
+    #login-container .login-form .text-input {
+      margin-bottom: 10px;
+      width: 100%; }
