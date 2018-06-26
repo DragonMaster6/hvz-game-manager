@@ -1,0 +1,16 @@
+<div id="login-container">
+  <div class="status">
+    {{ message }}
+  </div>
+  <form class="login-form">
+    <div class="row">
+      <label for="username">Username: </label>
+      <input type="text" id="username" class="text-input" ng-model="user">
+    </div>
+    <div class="row">
+      <label for="password">Password: </label>
+      <input type="password" id="password" class="text-input" ng-model="pass">
+    </div>
+    <input type="submit" class='btn btn-login' value='Login' ng-click="login()">
+  </form>
+</div>
