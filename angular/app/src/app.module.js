@@ -8,7 +8,7 @@ angular.module('hvzGameManager', [
   'restangular',
 ])
 
-.config(['$locationProvider', '$routeProvider', 'RestangularProvider', function($locationProvider, $routeProvider, RestangularProvider) {
+.config(['$httpProvider', '$locationProvider', '$routeProvider', 'RestangularProvider', function($httpProvider, $locationProvider, $routeProvider, RestangularProvider) {
   $locationProvider.hashPrefix('!');
 
   // Main View to display everything
@@ -33,11 +33,13 @@ angular.module('hvzGameManager', [
 
   // Configure the app to use Drupal's REST api
   RestangularProvider.setBaseUrl('http://admin.hvz.b.local');
-  // RestangularProvider.setDefaultHeaders({'Access-Control-Allow-Origin': true});
+
+  // To enable cookie based authentication, set withCredentials to true
+  $httpProvider.defaults.withCredentials = true;
 
 }])
 
-.run(['$rootScope', 'session', function($rootScope, session){
+.run(['$rootScope', 'session', 'userResource', function($rootScope, session, userResource){
   // Set the current user so that this information can be cached.
   console.log("Restarting app");
   $rootScope.currentUser = false;
@@ -50,7 +52,25 @@ angular.module('hvzGameManager', [
         console.log($rootScope.currentUser);
       });
   }
+  else {
+    // anonymous user
+    console.log("Root:Anonymous User");
+  }
 }])
-.controller('MainController', [function(){
 
+.controller('MainController', ['$scope', 'session', function($scope, session){
+  $scope.userLogout = function() {
+    console.log("Logging out");
+    var request = session.logout();
+    if (request != false) {
+      // There is a promise, so process it
+      request.then(function(data){
+        console.log("Successfully logged out");
+        session.delete();
+      })
+      .catch(function(data){
+        console.log("Error: Unable to logout");
+      });
+    }
+  }
 }]);

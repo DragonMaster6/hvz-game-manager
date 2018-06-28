@@ -7,20 +7,6 @@ angular.module('hvzGameManager')
     var userResource = Restangular.all('user');
     var service = {};
 
-    // The login callback.
-    service.login = function(username, password) {
-      var loginResource = Restangular.all('user/login');
-      // Sanitize the username and password.
-      // Post the information to Drupal
-      var data = {name: username, pass:password};
-      return loginResource.post(data, {'_format':'json'});
-    }
-
-    service.logout = function() {
-      var loginResource = Restangular.one('user/logout');
-      return loginResource.get();
-    }
-
     service.getUser = function(uid) {
       return userResource.get(uid, {'_format':'json'});
     }
@@ -44,8 +30,42 @@ angular.module('hvzGameManager')
   }])
 
   // Stores the current session a user has.
-  .factory('session', ['$localStorage', 'userResource', function($localStorage, userResource) {
+  .factory('session', ['$localStorage', 'Restangular', 'userResource', function($localStorage, Restangular, userResource) {
     var currentSession = {};
+
+    // The login callback.
+    currentSession.login = function(username, password) {
+      var loginResource = Restangular.all('user/login');
+      // Sanitize the username and password.
+      // Post the information to Drupal
+      var data = {name: username, pass:password};
+      return loginResource.post(data, {'_format':'json'});
+    }
+
+    currentSession.logout = function() {
+      // Get the logout token from the current user
+      var loginResource = Restangular.allUrl('user/logout');
+      var currentSession = this.getSession();
+      var result = false;
+
+      // If there is a session, retrieve the token and perform the logout.
+      if (currentSession) {
+        var logoutToken = currentSession.logoutToken;
+        var data = {
+          '_format':'json',
+          'token': logoutToken,
+        };
+        var headers = {
+          'x-csrf-token': currentSession.token,
+        }
+        result = loginResource.post(null, data);
+      }
+
+      return result;
+    }
+
+    // Retrieves the logged in user's csrf token
+
 
     // Constructor and Destructor
     currentSession.create = function(userId, csrfTok, logoutTok) {

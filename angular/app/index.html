@@ -19,11 +19,11 @@
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
-  <div class="navigation">
+  <div class="navigation" ng-controller="MainController">
     <h1> HvZ Game Manager Temp Title </h1>
     <ul>
       <li> <a href='/user/login' ng-show="!currentUser"> Login </a> </li>
-      <li> <a href='/user/logout' ng-show="currentUser"> Logout </a> </li>
+      <li> <a href='' ng-click="userLogout()" ng-show="currentUser"> Logout </a> </li>
     </ul>
   </div>
 

@@ -3,11 +3,10 @@
 angular.module('hvzGameManager')
   .controller('LoginController', ['$location', '$rootScope', '$scope', 'session', 'userResource', function($location, $rootScope, $scope, session, userResource) {
     // Redirect the user if they are already logged in.
-    console.log("The current user");
+    console.log("Login Controller: The current user");
     console.log($rootScope.currentUser);
     if ($rootScope.currentUser != false) {
       console.log("redirecting");
-      console.log(currentUser);
       $location.path('/');
     }
 
@@ -20,7 +19,7 @@ angular.module('hvzGameManager')
 
     // Login function after the submit button has been pressed
     $scope.login = function() {
-      userResource.login($scope.user, $scope.pass)
+      session.login($scope.user, $scope.pass)
         .then(function(data) {
           // Create a new session and redirect back to the home page.
           console.log(data);
