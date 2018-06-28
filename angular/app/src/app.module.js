@@ -6,6 +6,7 @@ angular.module('hvzGameManager', [
   'ngSanitize',
   'ngStorage',
   'restangular',
+  'UserRegister',
 ])
 
 .config(['$httpProvider', '$locationProvider', '$routeProvider', 'RestangularProvider', function($httpProvider, $locationProvider, $routeProvider, RestangularProvider) {
@@ -17,6 +18,11 @@ angular.module('hvzGameManager', [
       controller: 'MainController',
       templateUrl: 'src/app.template.html',
     })
+    // User gets redirected here to their dashboard or their organization's dashboard.
+    // .when('/dashboard', {
+    //   controller:
+    //   templateUrl:
+    // })
     .when('/test', {
       controller: 'TestResource',
       templateUrl: 'src/components/testResource.template.html',

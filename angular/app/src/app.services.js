@@ -14,7 +14,7 @@ angular.module('hvzGameManager')
     return service;
   }])
 
-  // Basic Page Node fetcher
+  // Manual Node Fetecher: /node/[nid]
   .factory('nodeResource', ['Restangular', function(Restangular){
     // var nodeResource = Restangular.service('node');
     // return Restangular.service('node');
@@ -27,6 +27,18 @@ angular.module('hvzGameManager')
 
     return service;
 
+  }])
+
+  // Custom API end point to retrieve basic pages of a specific type.
+  .factory('basicPageResource', ['Restangular', function(Restangular) {
+    var pageResource = Restangular.allUrl('api/basic-page');
+    var service = {};
+
+    service.getPage = function(type) {
+      return pageResource.get(type, {'_format': 'json'});
+    }
+
+    return service;
   }])
 
   // Stores the current session a user has.

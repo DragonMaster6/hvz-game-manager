@@ -1,0 +1,21 @@
+uuid: 21d920a3-df10-4b19-a7c3-5ef727672cd0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_tags
+    - node.type.basic_page
+  module:
+    - options
+id: node.basic_page.field_content_tags
+field_name: field_content_tags
+entity_type: node
+bundle: basic_page
+label: 'Basic Page Tag'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,24 @@
+uuid: b3ef35ac-e386-47a9-b87d-41a29dbf3633
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_content_tags
+field_name: field_content_tags
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: front
+      label: 'Front Page'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
