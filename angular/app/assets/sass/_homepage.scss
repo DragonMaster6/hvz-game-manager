@@ -32,25 +32,9 @@ header {
   }
 }
 
-.row:after {
-  clear: both;
-  display: block;
-  content: '';
-}
-
 section.main-container {
   width: 90%;
   margin: 0 auto;
-
-  .content, .side-content {
-    width: 45%;
-    display: block;
-    float: left;
-  }
-
-  :after {
-    clear: both;
-  }
 }
 
 footer {

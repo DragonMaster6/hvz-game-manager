@@ -1,11 +1,18 @@
-<div class="user-register-container">
-  <form>
-    <label for="email"> Email: </label>
-    <input type="text" id="email" ng-model="email">
-    <label for="first-name"> First Name: </label>
-    <input type="text" id="first-name" ng-model="firstName">
-    <label for="last-name"> Last Name: </label>
-    <input type="text" id="last-name" ng-model="lastName">
-    <input type="submit" value="Create Account">
-  </form>
+<div class="main-container">
+  <div class="row">
+    <div class="col-3 left-content">
+      <div class="block" ng-repeat="node in nodes">
+        <h2 ng-bind-html="node.title"></h2>
+        <div ng-bind-html="node.body"></div>
+      </div>
+    </div>
+
+    <div class="col-3 right-content">
+      <div class="user-register-container">
+        <h2> Signup for an Account Now! </h2>
+        <signup-block></signup-block>
+      </div>
+    </div>
+  </div>
 </div>
+

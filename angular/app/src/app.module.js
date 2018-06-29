@@ -15,8 +15,10 @@ angular.module('hvzGameManager', [
   // Main View to display everything
   $routeProvider
     .when('/', {
-      controller: 'MainController',
-      templateUrl: 'src/app.template.html',
+      controller: 'UserRegisterController',
+      // templateUrl: 'src/app.template.html',
+      // templateUrl: 'assets/templates/two-column-equal.html'
+      templateUrl: 'src/components/signup/UserRegister.page_template.html',
     })
     // User gets redirected here to their dashboard or their organization's dashboard.
     // .when('/dashboard', {
@@ -65,17 +67,6 @@ angular.module('hvzGameManager', [
 }])
 
 .controller('MainController', ['$scope', 'basicPageResource', 'session', function($scope, basicPageResource, session){
-  // Retrieve all front page nodes to be displayed.
-  basicPageResource.getPage('front')
-    .then(function(nodes) {
-      $scope.nodes = [];
-      for (var element in nodes.plain()) {
-        $scope.nodes = $scope.nodes.concat(nodes[element]);
-      }
-    })
-    .catch(function(data) {
-      console.log('issue getting the front page');
-    });
 
   // Logs the user out from the Drupal site
   $scope.userLogout = function() {

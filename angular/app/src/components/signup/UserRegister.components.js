@@ -3,5 +3,5 @@
 angular.module("UserRegister")
   .component('signupBlock', {
     controller: 'UserRegisterController',
-    templateUrl: '/src/components/signup/UserRegister.page_template.html',
+    templateUrl: '/src/components/signup/UserRegister.block_template.html',
   });
