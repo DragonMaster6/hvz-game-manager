@@ -1,6 +1,11 @@
 <div class="user-register-container">
-  <div class="node" ng-repeat="node in nodes">
-    <h2 ng-bind-html="node.title"></h2>
-    <div ng-bind-html="node.body"></div>
-  </div>
+  <form>
+    <label for="email"> Email: </label>
+    <input type="text" id="email" ng-model="email">
+    <label for="first-name"> First Name: </label>
+    <input type="text" id="first-name" ng-model="firstName">
+    <label for="last-name"> Last Name: </label>
+    <input type="text" id="last-name" ng-model="lastName">
+    <input type="submit" value="Create Account">
+  </form>
 </div>

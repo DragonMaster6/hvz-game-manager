@@ -64,7 +64,20 @@ angular.module('hvzGameManager', [
   }
 }])
 
-.controller('MainController', ['$scope', 'session', function($scope, session){
+.controller('MainController', ['$scope', 'basicPageResource', 'session', function($scope, basicPageResource, session){
+  // Retrieve all front page nodes to be displayed.
+  basicPageResource.getPage('front')
+    .then(function(nodes) {
+      $scope.nodes = [];
+      for (var element in nodes.plain()) {
+        $scope.nodes = $scope.nodes.concat(nodes[element]);
+      }
+    })
+    .catch(function(data) {
+      console.log('issue getting the front page');
+    });
+
+  // Logs the user out from the Drupal site
   $scope.userLogout = function() {
     console.log("Logging out");
     var request = session.logout();

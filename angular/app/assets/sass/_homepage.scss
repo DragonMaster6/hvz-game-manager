@@ -1,0 +1,66 @@
+// Main page with header and footer styles.
+body {
+  background-color: $lighter-gray;
+}
+
+header {
+  background-color: $primary;
+  text-align: center;
+  color: $white;
+
+  h1 {
+    margin: 0;
+    padding: 20px;
+  }
+
+  .navigation {
+    display: inline-block;
+    padding: 10px;
+
+    ul {
+      padding: 0;
+      margin: 0;
+
+      li {
+        list-style-type: none;
+        padding: 5px 10px;
+        margin: 0;
+        margin-right: 5px;
+        background-color: $secondary-1-light;
+      }
+    }
+  }
+}
+
+.row:after {
+  clear: both;
+  display: block;
+  content: '';
+}
+
+section.main-container {
+  width: 90%;
+  margin: 0 auto;
+
+  .content, .side-content {
+    width: 45%;
+    display: block;
+    float: left;
+  }
+
+  :after {
+    clear: both;
+  }
+}
+
+footer {
+  background-color: $black;
+  color: $secondary-2-lighter;
+  padding: 20px 30px;
+  text-align: center;
+}
+
+// Misc classes
+.hide {
+  display: none;
+}
