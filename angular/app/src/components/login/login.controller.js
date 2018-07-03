@@ -22,12 +22,13 @@ angular.module('hvzGameManager')
       session.login($scope.user, $scope.pass)
         .then(function(data) {
           // Create a new session and redirect back to the home page.
-          console.log(data);
           session.create(data.current_user.uid, data.csrf_token, data.logout_token);
           $location.path('/');
         })
         .catch(function(data){
-          $scope.message = "Login Failed";
+          if (data.status == '403') {
+            $scope.message = "You are already signed in.";
+          }
         });
     }
   }]);

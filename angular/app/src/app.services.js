@@ -5,10 +5,17 @@
 angular.module('hvzGameManager')
   .factory('userResource', ['Restangular', function(Restangular){
     var userResource = Restangular.all('user');
+    var userRegisterResource = Restangular.allUrl('user/register');
     var service = {};
 
+    // Returns an individual user based on the uid
     service.getUser = function(uid) {
       return userResource.get(uid, {'_format':'json'});
+    }
+
+    // Sends a request to create a new user
+    service.createUser = function(data) {
+      return userRegisterResource.post(data, {'_format':'json'});
     }
 
     return service;

@@ -1,9 +1,41 @@
-<form>
-  <label for="email"> Email: </label>
-  <input type="text" id="email" ng-model="email">
-  <label for="first-name"> First Name: </label>
-  <input type="text" id="first-name" ng-model="firstName">
-  <label for="last-name"> Last Name: </label>
-  <input type="text" id="last-name" ng-model="lastName">
-  <input type="submit" value="Create Account">
+<form id="signup-form" name="signup" novalidate>
+  <div class="test">
+    {{ test }}
+  </div>
+
+  <label>
+    Email:
+    <input type="email" id="email" name="email" ng-model="email" required>
+  </label>
+  <div class="form-error" ng-show="signup.email.$touched && signup.email.$invalid">
+    <span ng-show="signup.email.$error.required"> This field is required </span>
+    <span ng-show="signup.email.$error.email"> Invalid email address </span>
+  </div>
+
+  <label>
+    First Name:
+    <input type="text" id="first-name" name="firstName" ng-model="firstName">
+  </label>
+
+  <label> Last Name:
+    <input type="text" id="last-name" ng-model="lastName">
+  </label>
+
+  <label>
+    Username:
+    <input type="text" id="user-name" name="userName" ng-model="userName" required>
+  </label>
+  <div class="form-error" ng-show="signup.userName.$touched && signup.userName.$invalid">
+    <span ng-show="signup.userName.$error.required"> Please enter a user name </span>
+  </div>
+
+  <label>
+    Password:
+    <input type="password" minlength="8" id="user-pass" name="userPass" ng-model="userPass" required>
+  </label>
+  <div class="form-error" ng-show="signup.userPass.$touched && signup.userPass.$invalid">
+    <span ng-show="signup.userPass.$error.required"> Enter a password </span>
+    <span ng-show="signup.userPass.$error.minlength"> Password too short </span>
+  </div>
+  <input type="submit" value="Create Account" ng-disabled="signup.$invalid" ng-click="createAccount(signup)">
 </form>
