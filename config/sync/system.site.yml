@@ -1,4 +1,4 @@
-uuid: f1fec96a-9244-4359-8790-6d2fa41bba14
+uuid: 89a269b5-65a0-4bbe-82c2-d0299ca1b277
 name: 'Humans vs Zombies Game Manager'
 mail: bjdmatson@gmail.com
 slogan: ''
@@ -12,3 +12,4 @@ langcode: en
 default_langcode: en
 _core:
   default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+mail_notification: ''

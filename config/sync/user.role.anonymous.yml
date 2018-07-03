@@ -11,3 +11,4 @@ is_admin: false
 permissions:
   - 'access content'
   - 'access user profiles'
+  - 'restful post user_registration'
