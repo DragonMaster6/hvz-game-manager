@@ -44,6 +44,7 @@ body {
 
 header {
   background-color: #0D7534;
+  background: linear-gradient(60deg, #000000, #0D7534);
   text-align: center;
   color: #FFFFFF; }
   header h1 {
@@ -74,6 +75,18 @@ footer {
 
 .hide {
   display: none; }
+
+#signup-form {
+  padding-left: 20px; }
+  #signup-form input[type=text], #signup-form input[type=email], #signup-form input[type=password] {
+    width: 100%;
+    margin-bottom: 10px; }
+
+.ng-touched.ng-invalid {
+  background-color: #CF3F3F; }
+
+.ng-touched.ng-valid {
+  background-color: #90C94A; }
 
 #login-container {
   width: 60%;

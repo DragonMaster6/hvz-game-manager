@@ -5,6 +5,7 @@ body {
 
 header {
   background-color: $primary;
+  background: linear-gradient(60deg, $black, $primary);
   text-align: center;
   color: $white;
 
