@@ -22,11 +22,7 @@
   <![endif]-->
   <header>
     <h1> Humans vs. Zombies </h1>
-    <div class="navigation" ng-controller="MainController">
-      <ul>
-        <li ng-show="!currentUser"> <a href='/user/login'> Login </a> </li>
-        <li ng-show="currentUser"> <a href='' ng-click="userLogout()"> Logout </a> </li>
-      </ul>
+    <div class="navigation">
     </div>
   </header>
 
@@ -46,12 +42,6 @@
   <script src="/assets/bower_components/restangular/dist/restangular.min.js"></script>
 
   <script src="/src/app.module.js"></script>
-  <script src="/src/app.services.js"></script>
-  <script src="/src/components/login/login.controller.js"></script>
-  <script src="/src/components/signup/UserRegister.module.js"></script>
-  <script src="/src/components/signup/UserRegister.controller.js"></script>
-  <script src="/src/components/signup/UserRegister.components.js"></script>
-  <script src="/src/components/dashboard/dashboard.module.js"></script>
-  <script src="/src/components/dashboard/dashboard.controller.js"></script>
+
 </body>
 </html>
