@@ -21,13 +21,9 @@ angular.module('hvzGameManager', [
       templateUrl: 'src/components/signup/UserRegister.page_template.html',
     })
     // User gets redirected here to their dashboard or their organization's dashboard.
-    // .when('/dashboard', {
-    //   controller:
-    //   templateUrl:
-    // })
-    .when('/test', {
-      controller: 'TestResource',
-      templateUrl: 'src/components/testResource.template.html',
+    .when('/dashboard', {
+      controller: 'DashboardController',
+      templateUrl: 'src/components/dashboard/dashboard.page_template.html',
     })
     // User Paths
     .when('/user/login', {

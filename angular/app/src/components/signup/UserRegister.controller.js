@@ -5,6 +5,10 @@ angular.module('UserRegister')
       $location.path('/dashboard');
     }
 
+    if (session.getSession()) {
+      $location.path('/dashboard');
+    }
+
     // Records any error messages from Drupal.
     $scope.apiMsg = '';
 

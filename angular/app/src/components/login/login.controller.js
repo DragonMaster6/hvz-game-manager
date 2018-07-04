@@ -7,7 +7,7 @@ angular.module('hvzGameManager')
     console.log($rootScope.currentUser);
     if ($rootScope.currentUser != false) {
       console.log("redirecting");
-      $location.path('/');
+      $location.path('/dashboard');
     }
 
     // Displays any errors that Drupal might throw back.
