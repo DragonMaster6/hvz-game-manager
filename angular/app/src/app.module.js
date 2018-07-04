@@ -1,11 +1,12 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('hvzGameManager', [
+angular.module('HvzGameManager', [
   'ngRoute',
   'ngSanitize',
   'ngStorage',
   'restangular',
+  'PlayerRegister',
 ])
 
 .config(['$httpProvider', '$locationProvider', '$routeProvider', 'RestangularProvider', function($httpProvider, $locationProvider, $routeProvider, RestangularProvider) {
@@ -14,6 +15,11 @@ angular.module('hvzGameManager', [
   // Main View to display everything
   $routeProvider
     .when('/', {
+      redirectTo: '/player/register',
+    })
+    .when('/player/register', {
+      controller: 'PlayerRegisterController',
+      templateUrl: 'src/sections/player/register/register.template.html'
     })
     .otherwise({redirectTo: '/'});
 
