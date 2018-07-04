@@ -7,6 +7,7 @@ angular.module('HvzGameManager', [
   'ngStorage',
   'restangular',
   'PlayerRegister',
+  'PrimaryMenu',
 ])
 
 .config(['$httpProvider', '$locationProvider', '$routeProvider', 'RestangularProvider', function($httpProvider, $locationProvider, $routeProvider, RestangularProvider) {
