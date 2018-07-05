@@ -4,9 +4,8 @@
 angular.module('HvzGameManager', [
   'ngRoute',
   'ngSanitize',
-  // 'ngStorage',
-  // 'restangular',
   'PlayerRegister',
+  'PlayerLogin',
   'PrimaryMenu',
 ])
 
@@ -17,6 +16,10 @@ angular.module('HvzGameManager', [
   $routeProvider
     .when('/', {
       redirectTo: '/player/register',
+    })
+    .when('/player/login', {
+      controller: 'PlayerLoginController',
+      templateUrl: 'src/sections/player/login/login.template.html',
     })
     .when('/player/register', {
       controller: 'PlayerRegisterController',
