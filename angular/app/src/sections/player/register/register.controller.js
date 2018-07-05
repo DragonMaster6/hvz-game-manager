@@ -10,10 +10,14 @@ angular.module('PlayerRegister')
         // Sanitize the data first
         for (var value in $scope.user) {
           console.log(value);
-          console.log($scope.user[value]);
+          // $scope.user[value] = strip_tags($scope.user[value]);
           $scope.user[value] = $sanitize($scope.user[value]);
+          $scope.user[value] = $scope.user[value].replace(/<[^>]+>/g, '');
+          console.log($scope.user[value]);
           // Check that there is still a value.
-          form_valid = $scope.user[value] != '';
+          if ($scope.user[value] == '') {
+            form_valid = false;
+          }
         }
 
         // If the form is still valid, send the data to drupal.
