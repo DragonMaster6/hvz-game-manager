@@ -7,7 +7,7 @@ angular.module('Shared')
     var format = {'_format': 'json'};
 
     userResource.registerUser = function(data) {
-      var registerResource = Restangular.oneUrl('user/register')
+      var registerResource = Restangular.allUrl('user/register')
       return registerResource.post(data, format);
     }
 
