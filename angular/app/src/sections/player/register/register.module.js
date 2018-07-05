@@ -1,3 +1,5 @@
 'use strict';
 
-angular.module('PlayerRegister', []);
+angular.module('PlayerRegister', [
+  'Shared',
+]);

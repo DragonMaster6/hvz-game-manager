@@ -4,8 +4,8 @@
 angular.module('HvzGameManager', [
   'ngRoute',
   'ngSanitize',
-  'ngStorage',
-  'restangular',
+  // 'ngStorage',
+  // 'restangular',
   'PlayerRegister',
   'PrimaryMenu',
 ])
