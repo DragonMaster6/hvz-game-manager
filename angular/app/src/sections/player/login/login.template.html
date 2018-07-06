@@ -19,6 +19,6 @@
     <span class="form-field-error" ng-show="loginForm.userPass.$touched && loginForm.userPass.$error.required">
       A username is required to login.
     </span>
-    <input type="submit" ng-disabled="loginForm.$invalid" value="Login">
+    <input type="submit" ng-click="login()" ng-disabled="loginForm.$invalid" value="Login">
   </form>
 </div>
