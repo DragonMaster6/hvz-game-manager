@@ -12,6 +12,7 @@ angular.module('PlayerLogin')
         .then(function(data){
           console.log('success', data);
           session.create(data.current_user.uid, data.csrf_token, data.logout_token);
+          $scope.$emit('userLogin', {'some': 'data'});
           $location.path('/player/dashboard');
         })
         .catch(function(err){

@@ -36,6 +36,30 @@ angular.module('HvzGameManager', [
 
 }])
 
+/** Main App Initialization **/
+.run(function($rootScope, session){
+  // Check if there is a current session.
+  // TODO: Change how this works to incorporate users who have deleted their cookies but
+  //   still logged onto Drupal.
+  if (session.getCurrentSession()) {
+    $rootScope.loggedin = true;
+  }
+  else {
+    $rootScope.loggedin = false;
+  }
+
+  $rootScope.$on('userLogin', function(event, data){
+    console.log(event);
+    console.log(data);
+    // Update a few variables to indicate the current state.
+    $rootScope.loggedin = true;
+  });
+
+  $rootScope.$on('userLogout', function(event, data){
+    $rootScope.loggedin = false;
+  });
+})
+
 /** Main controller to hold all global variables **/
 .controller('MainController', ['$scope', 'menuResource', 'session', function($scope, menuResource, session){
   // Get the main menu for navigation.
@@ -55,6 +79,7 @@ angular.module('HvzGameManager', [
     session.logout()
       .then(function(response){
         // emit/broadcast the event that the user logged out.
+        $scope.$emit('userLogout');
       })
       .catch(function(err){
         // There was an error logging out.
