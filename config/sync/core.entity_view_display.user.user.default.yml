@@ -1,0 +1,27 @@
+uuid: 3f68c590-b1ce-4b2c-9eab-330d43c9680b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_avatar
+  module:
+    - image
+    - user
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  field_avatar:
+    weight: 6
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  member_for:
+    weight: 5
+    region: content
+hidden: {  }

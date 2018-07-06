@@ -15,11 +15,13 @@ module:
   filter: 0
   image: 0
   link: 0
+  menu_ui: 0
   node: 0
   options: 0
   page_cache: 0
   path: 0
   rest: 0
+  rest_menu_items: 0
   restui: 0
   serialization: 0
   system: 0
@@ -29,6 +31,7 @@ module:
   toolbar: 0
   user: 0
   views_ui: 0
+  menu_link_content: 1
   pathauto: 1
   views: 10
   minimal: 1000

@@ -11,3 +11,4 @@ is_admin: false
 permissions:
   - 'access content'
   - 'access user profiles'
+  - 'restful get rest_menu_item'
