@@ -19,7 +19,15 @@ angular.module('Shared')
 
     // Logs a player out of Drupal
     sessionFactory.logout = function() {
+      var loginResource = Restangular.allUrl('user/logout');
+      var currentSession = this.getCurrentSession();
+      var logout_tok = '';
+      if (currentSession) {
+        logout_tok = currentSession.logout_token;
+      }
 
+      format.token = logout_tok;
+      return loginResource.post('', format);
     }
 
     // Gets the current status of the current user.
