@@ -33,12 +33,6 @@ angular.module('HvzGameManager', [
   // Configure the app to use Drupal's REST api
   RestangularProvider.setBaseUrl('http://admin.hvz.b.local');
   RestangularProvider.setDefaultHttpFields({'withCredentials': 'true'});
-  // RestangularProvider.setDefaultHeaders({
-  //   'Access-Control-Allow-Credentials': 'true',
-  // });
-
-  // To enable cookie based authentication, set withCredentials to true
-  // $httpProvider.defaults.withCredentials = true;
 
 }])
 

@@ -61,7 +61,14 @@ header {
         padding: 5px 10px;
         margin: 0;
         margin-right: 5px;
-        background-color: #73B423; }
+        background-color: #73B423;
+        float: left;
+        border-radius: 4px; }
+        header .navigation ul li a {
+          text-decoration: none;
+          color: #FFFFFF; }
+        header .navigation ul li:hover {
+          background-color: #3F7300; }
 
 section.main-container {
   width: 90%;
