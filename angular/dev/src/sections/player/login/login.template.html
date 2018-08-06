@@ -1,0 +1,24 @@
+<div id="login-container">
+  <h1> Login here </h1>
+  <div class="login-status">
+    {{ message }}
+  </div>
+  <form name="loginForm" class="login-form" novalidate>
+    <label>
+      Username:
+      <input type="text" name="userName" class="text-input" ng-model="user.name" required>
+    </label>
+    <div class="form-field-error" ng-show="loginForm.userName.$touched && loginForm.userName.$error.required">
+      A username is required to login.
+    </div>
+
+    <label>
+      Password:
+      <input type="password" name="userPass" class="text-input" ng-model="user.pass" required>
+    </label>
+    <div class="form-field-error" ng-show="loginForm.userPass.$touched && loginForm.userPass.$error.required">
+      A password is required to login.
+    </div>
+    <input type="submit" ng-click="login()" ng-disabled="loginForm.$invalid" value="Login">
+  </form>
+</div>

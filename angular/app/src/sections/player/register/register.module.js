@@ -1,5 +1,5 @@
 'use strict';
 
-angular.module('PlayerRegister', [
+angular.module('hvz.PlayerRegister', [
   'Shared',
 ]);

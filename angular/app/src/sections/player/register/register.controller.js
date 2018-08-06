@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('PlayerRegister')
+angular.module('hvz.PlayerRegister')
   .controller('PlayerRegisterController', ['$sanitize', '$scope', 'session',  'userResource', function($sanitize, $scope, session, userResource){
     $scope.user = {};
 

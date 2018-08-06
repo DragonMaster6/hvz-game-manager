@@ -1,5 +1,5 @@
 'use strict';
 
-angular.module('PlayerLogin', [
+angular.module('hvz.PlayerLogin', [
   'Shared',
 ]);

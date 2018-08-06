@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('PlayerLogin')
+angular.module('hvz.PlayerLogin')
   .controller('PlayerLoginController', ['$location', '$scope', 'session', function($location, $scope, session){
     // TODO: Add logic to redirect a logged in user. No need to show this page
     // if they are already logged in.

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('PrimaryMenu')
+angular.module('hvz.PrimaryMenu')
   .controller('PrimaryMenuController', ['$scope', function($scope){
-    
+
   }]);

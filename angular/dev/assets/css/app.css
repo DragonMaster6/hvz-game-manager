@@ -1,0 +1,107 @@
+.col-1 {
+  display: inline-block;
+  float: left;
+  width: 16.66667%;
+  box-sizing: border-box; }
+
+.col-2 {
+  display: inline-block;
+  float: left;
+  width: 33.33333%;
+  box-sizing: border-box; }
+
+.col-3 {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  box-sizing: border-box; }
+
+.col-4 {
+  display: inline-block;
+  float: left;
+  width: 66.66667%;
+  box-sizing: border-box; }
+
+.col-5 {
+  display: inline-block;
+  float: left;
+  width: 83.33333%;
+  box-sizing: border-box; }
+
+.col-6 {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  box-sizing: border-box; }
+
+.row:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+body {
+  background-color: #eee; }
+
+header {
+  background-color: #0D7534;
+  background: linear-gradient(60deg, #000000, #0D7534);
+  text-align: center;
+  color: #FFFFFF; }
+  header h1 {
+    margin: 0;
+    padding: 20px; }
+  header .navigation {
+    display: inline-block;
+    padding: 10px; }
+    header .navigation ul {
+      padding: 0;
+      margin: 0; }
+      header .navigation ul li {
+        list-style-type: none;
+        background-color: #73B423;
+        border-radius: 4px;
+        float: left;
+        margin-right: 5px; }
+        header .navigation ul li a {
+          text-decoration: none;
+          color: #FFFFFF;
+          display: block;
+          padding: 5px 10px; }
+        header .navigation ul li:hover {
+          background-color: #3F7300; }
+
+section.main-container {
+  width: 90%;
+  margin: 0 auto; }
+
+footer {
+  background-color: #000000;
+  color: #37748B;
+  padding: 20px 30px;
+  text-align: center; }
+
+.hide {
+  display: none; }
+
+#signup-form {
+  padding-left: 20px; }
+  #signup-form input[type=text], #signup-form input[type=email], #signup-form input[type=password] {
+    width: 100%;
+    margin-bottom: 10px; }
+
+.ng-touched.ng-invalid {
+  background-color: #CF3F3F; }
+
+.ng-touched.ng-valid {
+  background-color: #90C94A; }
+
+#login-container {
+  width: 60%;
+  margin: 10px auto;
+  border: solid 1px black;
+  box-shadow: 0 6px 10px #999; }
+  #login-container .login-form {
+    padding: 10px; }
+    #login-container .login-form .text-input {
+      margin-bottom: 10px;
+      width: 100%; }

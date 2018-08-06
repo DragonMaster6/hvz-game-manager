@@ -1,0 +1,46 @@
+<div class="col-3 about-container">
+  <h1> About Page </h1>
+</div>
+
+<div class="col-3 register-form-container">
+  <h1> Signup for an account now! </h1>
+  <form name="signup" novalidate>
+    <label>
+      Email:
+      <input type="email" name="userEmail" id="user-email" ng-model="user.mail" ng-model-options="{updateOn: 'blur'}" required>
+    </label>
+    <div ng-show="signup.$submitted || signup.userEmail.$touched">
+      <span class="form-field-error" ng-show="signup.userEmail.$error.required">
+        Please enter in an email.
+      </span>
+      <span class="form-field-error" ng-show="signup.userEmail.$error.email">
+        Invalid Email Address
+      </span>
+    </div>
+
+    <label>
+      Username:
+      <input type="text" name="userName" id="user-name" ng-model="user.name" required>
+    </label>
+    <div ng-show="signup.$submitted || signup.userName.$touched">
+      <span class="form-field-error" ng-show="signup.userName.$error.required">
+        Enter a unique userName
+        <!-- TODO: Send this name to drupal to check for a valid username -->
+      </span>
+    </div>
+
+    <label>
+      Password:
+      <input type="password" name="userPass" id="user-pass" minLength="8" ng-model="user.pass" required>
+    </label>
+    <div ng-show="signup.$submitted || signup.userPass.$touched">
+      <span class="form-field-error" ng-show="signup.userPass.$error.required">
+        Please enter a pass phrase.
+      </span>
+      <span class="form-field-error" ng-show="signup.userPass.$error.minlength">
+        Password too short.
+      </span>
+    </div>
+    <input type="submit" ng-click="register(signup)">
+  </form>
+</div>

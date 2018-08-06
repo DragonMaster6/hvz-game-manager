@@ -2,19 +2,16 @@
 <!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="HvzGameManager" class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="hvz" class="no-js"> <!--<![endif]-->
 <head>
+  <base href="/">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Humans vs. Zombies</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/assets/bower_components/html5-boilerplate/dist/css/normalize.css">
-  <link rel="stylesheet" href="/assets/bower_components/html5-boilerplate/dist/css/main.css">
   <link rel="stylesheet" href="/assets/css/app.css">
-  <base href="/">
-  <script src="/assets/bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
-  <script src="/assets/bower_components/angular/angular.js"></script>
+  <script src="/app.js"></script>
 </head>
 <body>
   <!--[if lt IE 7]>
@@ -45,27 +42,6 @@
   <footer>
     &copy; 2018 - Ben Matson
   </footer>
-
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
-  <script src="/assets/bower_components/angular-route/angular-route.js"></script>
-  <script src="/assets/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
-  <script src="/assets/bower_components/lodash/dist/lodash.min.js"></script>
-  <script src="/assets/bower_components/ngstorage/ngStorage.min.js"></script>
-  <script src="/assets/bower_components/restangular/dist/restangular.min.js"></script>
-
-  <script src="/src/app.module.js"></script>
-  <script src="/src/shared/shared.module.js"></script>
-  <script src="/src/shared/session/session.services.js"></script>
-  <script src="/src/shared/user-resource/user-resource.factory.js"></script>
-  <script src="/src/shared/menu-resource/menu-resource.factory.js"></script>
-  <script src="/src/components/primary_menu/primary_menu.module.js"></script>
-  <script src="/src/components/primary_menu/primary_menu.controller.js"></script>
-  <script src="/src/sections/player/register/register.module.js"></script>
-  <script src="/src/sections/player/register/register.controller.js"></script>
-  <script src="/src/sections/player/login/login.module.js"></script>
-  <script src="/src/sections/player/login/login.controller.js"></script>
 
 </body>
 </html>

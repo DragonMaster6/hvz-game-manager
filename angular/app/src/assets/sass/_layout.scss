@@ -1,0 +1,14 @@
+@for $col from 1 through $col_num {
+  .col-#{$col} {
+    display: inline-block;
+    float: left;
+    width: 100% / ($col_num/$col);
+    box-sizing: border-box;
+  }
+}
+
+.row:after {
+  content: '';
+  display: block;
+  clear: both;
+}

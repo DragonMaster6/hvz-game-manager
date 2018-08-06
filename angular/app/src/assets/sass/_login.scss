@@ -1,0 +1,15 @@
+#login-container {
+  width: 60%;
+  margin: 10px auto;
+  border: solid 1px black;
+  box-shadow: 0 6px 10px #999;
+
+  .login-form {
+    padding: 10px;
+
+    .text-input {
+      margin-bottom: 10px;
+      width: 100%;
+    }
+  }
+}

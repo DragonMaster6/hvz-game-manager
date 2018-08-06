@@ -1,12 +1,12 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('HvzGameManager', [
+angular.module('hvz', [
   'ngRoute',
   'ngSanitize',
-  'PlayerRegister',
-  'PlayerLogin',
-  'PrimaryMenu',
+  'hvz.PlayerRegister',
+  'hvz.PlayerLogin',
+  'hvz.PrimaryMenu',
 ])
 
 .config(['$httpProvider', '$locationProvider', '$routeProvider', 'RestangularProvider', function($httpProvider, $locationProvider, $routeProvider, RestangularProvider) {
